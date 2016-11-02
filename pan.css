@@ -1,0 +1,376 @@
+.stage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 460px;
+  width: 480px;
+}
+/*绘制圆形图*/
+.avatar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 64px;
+  width: 64px;
+  background-repeat: no-repeat;
+  /* 保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小 */
+  background-size: cover;
+  /*以正方形的figure绘制圆形图*/
+  border-radius: 50%;
+  /*圆形视图被放置在正方形的中心位置*/
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  background-color: #F7C02A;
+  opacity: 0.4;
+  filter:alpha(opacity=40);
+}
+figcaption{
+	margin-top: 20px;
+	margin-left: 8px
+}
+.avatar:nth-of-type(1) {
+	/*设置动画名称  动画完成的时间2s 0.1s完成一个周期*/
+	/*cubic-bezier:拉伸（0,0）到（1,1）的线形成一条曲线 称作贝塞尔曲线*/
+	/*forwards:动画完成后保持最后一个属性值*/
+  -webkit-animation: ani1 2s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani1 2s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani1 {
+	/*0%:表示动画刚开始的时候，20%:动画完成20%的时间*/
+	/*动画进行  开始到20%执行的动作*/
+  0%, 20% {
+  	/*2D旋转 45度角*/
+    -webkit-transform: rotate(45deg) translate(0) rotate(-45deg);
+            transform: rotate(45deg) translate(0) rotate(-45deg);
+  }
+  /*动画进行从34%到结束执行的动作*/
+  34%, 100% {
+  	/*rotate(45deg):div顺时针旋转45度(它的标准坐标也跟着旋转45度) 
+  	translate(208px):往标准意义上X的正方向，移动208px的距离 rotate(-45deg):div逆时针旋转45度
+  	  成正常的视角*/
+    -webkit-transform: rotate(45deg) translate(208px) rotate(-45deg);
+            transform: rotate(45deg) translate(208px) rotate(-45deg);
+  }
+}
+@keyframes ani1 {
+  0%, 20% {
+    -webkit-transform: rotate(45deg) translate(0) rotate(-45deg);
+            transform: rotate(45deg) translate(0) rotate(-45deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(45deg) translate(208px) rotate(-45deg);
+            transform: rotate(45deg) translate(208px) rotate(-45deg);
+  }
+}
+.avatar:nth-of-type(2) {
+  -webkit-animation: ani2 2s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani2 2s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani2 {
+  0%, 20% {
+    -webkit-transform: rotate(90deg) translate(0) rotate(-90deg);
+            transform: rotate(90deg) translate(0) rotate(-90deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(90deg) translate(208px) rotate(-90deg);
+            transform: rotate(90deg) translate(208px) rotate(-90deg);
+  }
+}
+@keyframes ani2 {
+  0%, 20% {
+    -webkit-transform: rotate(90deg) translate(0) rotate(-90deg);
+            transform: rotate(90deg) translate(0) rotate(-90deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(90deg) translate(208px) rotate(-90deg);
+            transform: rotate(90deg) translate(208px) rotate(-90deg);
+  }
+}
+.avatar:nth-of-type(3) {
+  -webkit-animation: ani3 2s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani3 2s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani3 {
+  0%, 20% {
+    -webkit-transform: rotate(135deg) translate(0) rotate(-135deg);
+            transform: rotate(135deg) translate(0) rotate(-135deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(135deg) translate(208px) rotate(-135deg);
+            transform: rotate(135deg) translate(208px) rotate(-135deg);
+  }
+}
+@keyframes ani3 {
+  0%, 20% {
+    -webkit-transform: rotate(135deg) translate(0) rotate(-135deg);
+            transform: rotate(135deg) translate(0) rotate(-135deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(135deg) translate(208px) rotate(-135deg);
+            transform: rotate(135deg) translate(208px) rotate(-135deg);
+  }
+}
+.avatar:nth-of-type(4) {
+  -webkit-animation: ani4 2s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani4 2s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani4 {
+  0%, 20% {
+    -webkit-transform: rotate(180deg) translate(0) rotate(-180deg);
+            transform: rotate(180deg) translate(0) rotate(-180deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(180deg) translate(208px) rotate(-180deg);
+            transform: rotate(180deg) translate(208px) rotate(-180deg);
+  }
+}
+@keyframes ani4 {
+  0%, 20% {
+    -webkit-transform: rotate(180deg) translate(0) rotate(-180deg);
+            transform: rotate(180deg) translate(0) rotate(-180deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(180deg) translate(208px) rotate(-180deg);
+            transform: rotate(180deg) translate(208px) rotate(-180deg);
+  }
+}
+.avatar:nth-of-type(5) {
+  -webkit-animation: ani5 2s 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani5 2s 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani5 {
+  0%, 20% {
+    -webkit-transform: rotate(225deg) translate(0) rotate(-225deg);
+            transform: rotate(225deg) translate(0) rotate(-225deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(225deg) translate(208px) rotate(-225deg);
+            transform: rotate(225deg) translate(208px) rotate(-225deg);
+  }
+}
+@keyframes ani5 {
+  0%, 20% {
+    -webkit-transform: rotate(225deg) translate(0) rotate(-225deg);
+            transform: rotate(225deg) translate(0) rotate(-225deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(225deg) translate(208px) rotate(-225deg);
+            transform: rotate(225deg) translate(208px) rotate(-225deg);
+  }
+}
+.avatar:nth-of-type(6) {
+  -webkit-animation: ani6 2s 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani6 2s 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani6 {
+  0%, 20% {
+    -webkit-transform: rotate(270deg) translate(0) rotate(-270deg);
+            transform: rotate(270deg) translate(0) rotate(-270deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(270deg) translate(208px) rotate(-270deg);
+            transform: rotate(270deg) translate(208px) rotate(-270deg);
+  }
+}
+@keyframes ani6 {
+  0%, 20% {
+    -webkit-transform: rotate(270deg) translate(0) rotate(-270deg);
+            transform: rotate(270deg) translate(0) rotate(-270deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(270deg) translate(208px) rotate(-270deg);
+            transform: rotate(270deg) translate(208px) rotate(-270deg);
+  }
+}
+.avatar:nth-of-type(7) {
+  -webkit-animation: ani7 2s 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani7 2s 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani7 {
+  0%, 20% {
+    -webkit-transform: rotate(315deg) translate(0) rotate(-315deg);
+            transform: rotate(315deg) translate(0) rotate(-315deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(315deg) translate(208px) rotate(-315deg);
+            transform: rotate(315deg) translate(208px) rotate(-315deg);
+  }
+}
+@keyframes ani7 {
+  0%, 20% {
+    -webkit-transform: rotate(315deg) translate(0) rotate(-315deg);
+            transform: rotate(315deg) translate(0) rotate(-315deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(315deg) translate(208px) rotate(-315deg);
+            transform: rotate(315deg) translate(208px) rotate(-315deg);
+  }
+}
+.avatar:nth-of-type(8) {
+  -webkit-animation: ani8 2s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: ani8 2s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@-webkit-keyframes ani8 {
+  0%, 20% {
+    -webkit-transform: rotate(360deg) translate(0) rotate(-360deg);
+            transform: rotate(360deg) translate(0) rotate(-360deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(360deg) translate(208px) rotate(-360deg);
+            transform: rotate(360deg) translate(208px) rotate(-360deg);
+  }
+}
+@keyframes ani8 {
+  0%, 20% {
+    -webkit-transform: rotate(360deg) translate(0) rotate(-360deg);
+            transform: rotate(360deg) translate(0) rotate(-360deg);
+  }
+  34%, 100% {
+    -webkit-transform: rotate(360deg) translate(208px) rotate(-360deg);
+            transform: rotate(360deg) translate(208px) rotate(-360deg);
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 220px;
+  width: 220px;
+}
+.image img {
+  position: relative;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  z-index: 1;
+}
+/*图片外面那个圈*/
+.image:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #f9fff7;
+  border: 3px solid #e7f5d1;
+  border-radius: 50%;
+  /*ease-out：以慢速结束的过渡效果*/
+  -webkit-animation: pulse 1s 1.4s ease-out;
+          animation: pulse 1s 1.4s ease-out;
+  /*播放3次动画*/
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+.image .smiley {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  height: 64px;
+  width: 64px;
+  background: #b5e763;
+  border-radius: 50%;
+  border: 5px solid white;
+  -webkit-animation: bounce 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: bounce 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  z-index: 1;
+}
+/*笑脸*/
+.image .smiley svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-animation: bounce 5s 0.075s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: bounce 5s 0.075s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  /*动画阶段时间进行到5%的时候 放大到1.5倍*/
+  5% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  /*动画阶段时间进行到100%的时候 回到原来的大小*/
+  10%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  5% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  10%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*主题图片外面那个圈的动画效果*/
+@-webkit-keyframes pulse {
+	/*通过动画阶段时间 控制圈的缩放及透明度 */
+  0% {
+  	/*scale:缩放  0.1表示缩小到0.1倍*/
+    -webkit-transform: scale(0.1, 0.1);
+            transform: scale(0.1, 0.1);
+            /*透明的背景*/
+    opacity: 0.0;
+  }
+  50% {
+  	/*当动画时间阶段进行到50%的时候透明度为1，不透明*/
+    opacity: 1.0;
+  }
+  100% {
+  	/*放大到3倍 透明*/
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0.0;
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+            transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0.0;
+  }
+}
+
+
+ 
