@@ -27,8 +27,7 @@
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
-  background-color: #F7C02A;
-  opacity: 0.4;
+  background-color: rgba(255,255,0,0.3);
   filter:alpha(opacity=40);
 }
 figcaption{
